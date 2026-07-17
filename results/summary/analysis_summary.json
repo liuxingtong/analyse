@@ -1,0 +1,509 @@
+{
+  "totals": {
+    "nanjingdonglu": {
+      "raw_points": 29981,
+      "trajectory_ids": 275,
+      "analysis_rows": 1050,
+      "removed_velocity": 11
+    },
+    "wujiaochang": {
+      "raw_points": 19157,
+      "trajectory_ids": 191,
+      "analysis_rows": 750,
+      "removed_velocity": 5
+    }
+  },
+  "descriptive": [
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "sample_set": "1",
+      "trajectory_ids": 30,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 1.126555320078,
+      "velocity_sd_m_s": 0.143111899882465,
+      "deviation_mean_m": 0.19012376499162,
+      "deviation_sd_m": 0.1418048786994741
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "sample_set": "2",
+      "trajectory_ids": 38,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 0.9692222396813335,
+      "velocity_sd_m_s": 0.3198577876799131,
+      "deviation_mean_m": 0.3399063086903733,
+      "deviation_sd_m": 0.2499789834037676
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "sample_set": "3",
+      "trajectory_ids": 95,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 1.3575959171526666,
+      "velocity_sd_m_s": 0.21077486240649737,
+      "deviation_mean_m": 0.33539428627367995,
+      "deviation_sd_m": 0.26807908146169296
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "sample_set": "4",
+      "trajectory_ids": 47,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 0.8320738586533334,
+      "velocity_sd_m_s": 0.11180386224908008,
+      "deviation_mean_m": 0.37656332877149334,
+      "deviation_sd_m": 0.30701890311369373
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "sample_set": "5",
+      "trajectory_ids": 20,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 0.9947083565746667,
+      "velocity_sd_m_s": 0.19168153745405933,
+      "deviation_mean_m": 0.4664235563369333,
+      "deviation_sd_m": 0.3981136997624242
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "sample_set": "6",
+      "trajectory_ids": 24,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 1.0559933376746666,
+      "velocity_sd_m_s": 0.16800921374420522,
+      "deviation_mean_m": 0.28492435143508,
+      "deviation_sd_m": 0.2326829152263229
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "sample_set": "7",
+      "trajectory_ids": 21,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 0.6142684676713334,
+      "velocity_sd_m_s": 0.12281485995768743,
+      "deviation_mean_m": 0.3905781221488001,
+      "deviation_sd_m": 0.3719267085991507
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "sample_set": "Total",
+      "trajectory_ids": 275,
+      "aggregation_points": 1050,
+      "velocity_mean_m_s": 0.9929167853551429,
+      "velocity_sd_m_s": 0.2886497251209712,
+      "deviation_mean_m": 0.3405591026639972,
+      "deviation_sd_m": 0.30277215354856335
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "sample_set": "1",
+      "trajectory_ids": 6,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 1.2765097256453333,
+      "velocity_sd_m_s": 0.14994504264008085,
+      "deviation_mean_m": 0.2804208300942133,
+      "deviation_sd_m": 0.19087953514385242
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "sample_set": "2",
+      "trajectory_ids": 64,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 1.3475095422060002,
+      "velocity_sd_m_s": 0.332026999523887,
+      "deviation_mean_m": 0.30577798153917995,
+      "deviation_sd_m": 0.2739027915240231
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "sample_set": "3",
+      "trajectory_ids": 27,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 1.2406232773999997,
+      "velocity_sd_m_s": 0.11532273126045502,
+      "deviation_mean_m": 0.17665095200261333,
+      "deviation_sd_m": 0.16410558019293034
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "sample_set": "4",
+      "trajectory_ids": 58,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 1.2538781734659998,
+      "velocity_sd_m_s": 0.11839657490671823,
+      "deviation_mean_m": 0.2839414141051733,
+      "deviation_sd_m": 0.27942556220919534
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "sample_set": "5",
+      "trajectory_ids": 36,
+      "aggregation_points": 150,
+      "velocity_mean_m_s": 1.4634986801646668,
+      "velocity_sd_m_s": 0.15135586120022343,
+      "deviation_mean_m": 0.31354869131486,
+      "deviation_sd_m": 0.30320903325334747
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "sample_set": "Total",
+      "trajectory_ids": 191,
+      "aggregation_points": 750,
+      "velocity_mean_m_s": 1.3164038797764,
+      "velocity_sd_m_s": 0.20778230003349848,
+      "deviation_mean_m": 0.272067973811208,
+      "deviation_sd_m": 0.25256450750034326
+    }
+  ],
+  "total_model_performance": [
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "scope": "total",
+      "segment": "total",
+      "feature_type": "individual",
+      "target": "velocity",
+      "n_total": 1050,
+      "n_oof": 1050,
+      "cv_method": "random_5fold_seed42",
+      "cv_r2": 0.867529739489066,
+      "cv_mae": 73.27649653785933,
+      "cv_rmse": 99.97112945536742,
+      "fold_r2_mean": 0.8657710856010834,
+      "fold_r2_sd": 0.021886182403699477,
+      "training_r2": 0.9316848289307184
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "scope": "total",
+      "segment": "total",
+      "feature_type": "individual",
+      "target": "deviation",
+      "n_total": 1050,
+      "n_oof": 1050,
+      "cv_method": "random_5fold_seed42",
+      "cv_r2": 0.5059770220026435,
+      "cv_mae": 97.87919576522239,
+      "cv_rmse": 136.77756758027627,
+      "fold_r2_mean": 0.5116956173653582,
+      "fold_r2_sd": 0.06732159911358485,
+      "training_r2": 0.7085884824951862
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "scope": "total",
+      "segment": "total",
+      "feature_type": "comprehensive",
+      "target": "velocity",
+      "n_total": 1050,
+      "n_oof": 1050,
+      "cv_method": "random_5fold_seed42",
+      "cv_r2": 0.6381877117884807,
+      "cv_mae": 119.47960146009338,
+      "cv_rmse": 165.21788558356562,
+      "fold_r2_mean": 0.6349561425746038,
+      "fold_r2_sd": 0.02336140139447167,
+      "training_r2": 0.8273729599713726
+    },
+    {
+      "site": "nanjingdonglu",
+      "station": "East Nanjing Road",
+      "scope": "total",
+      "segment": "total",
+      "feature_type": "comprehensive",
+      "target": "deviation",
+      "n_total": 1050,
+      "n_oof": 1050,
+      "cv_method": "random_5fold_seed42",
+      "cv_r2": 0.4255055933614089,
+      "cv_mae": 107.62152502839422,
+      "cv_rmse": 147.49734528139228,
+      "fold_r2_mean": 0.4351052536831732,
+      "fold_r2_sd": 0.08925176354743171,
+      "training_r2": 0.6700424823943163
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "scope": "total",
+      "segment": "total",
+      "feature_type": "individual",
+      "target": "velocity",
+      "n_total": 750,
+      "n_oof": 750,
+      "cv_method": "random_5fold_seed42",
+      "cv_r2": 0.7852747225689799,
+      "cv_mae": 56.16930612105401,
+      "cv_rmse": 87.8979532919867,
+      "fold_r2_mean": 0.7850135433372052,
+      "fold_r2_sd": 0.03672348142050829,
+      "training_r2": 0.919949696688228
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "scope": "total",
+      "segment": "total",
+      "feature_type": "individual",
+      "target": "deviation",
+      "n_total": 750,
+      "n_oof": 750,
+      "cv_method": "random_5fold_seed42",
+      "cv_r2": 0.4869596463318494,
+      "cv_mae": 71.97651459588593,
+      "cv_rmse": 102.80023357419854,
+      "fold_r2_mean": 0.48503215197624944,
+      "fold_r2_sd": 0.06922182751139437,
+      "training_r2": 0.7455798609961297
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "scope": "total",
+      "segment": "total",
+      "feature_type": "comprehensive",
+      "target": "velocity",
+      "n_total": 750,
+      "n_oof": 750,
+      "cv_method": "random_5fold_seed42",
+      "cv_r2": 0.6488593421568953,
+      "cv_mae": 77.40881696878947,
+      "cv_rmse": 112.40295677812469,
+      "fold_r2_mean": 0.648138626374592,
+      "fold_r2_sd": 0.031107115694152955,
+      "training_r2": 0.8219205897039367
+    },
+    {
+      "site": "wujiaochang",
+      "station": "Wujiaochang",
+      "scope": "total",
+      "segment": "total",
+      "feature_type": "comprehensive",
+      "target": "deviation",
+      "n_total": 750,
+      "n_oof": 750,
+      "cv_method": "random_5fold_seed42",
+      "cv_r2": 0.34610535490298966,
+      "cv_mae": 83.75831732556206,
+      "cv_rmse": 116.05723745178945,
+      "fold_r2_mean": 0.3452141858996223,
+      "fold_r2_sd": 0.06238531178476002,
+      "training_r2": 0.6200618822583832
+    }
+  ],
+  "depth_top": {
+    "velocity": {
+      "individual": {
+        "near": {
+          "feature": "painting.near",
+          "score": 0.6818181818181819,
+          "appearances": 2
+        },
+        "middle": {
+          "feature": "chandelier.middle",
+          "score": 0.9090909090909091,
+          "appearances": 1
+        },
+        "far": {
+          "feature": "railing.far",
+          "score": 0.8181818181818182,
+          "appearances": 1
+        }
+      },
+      "comprehensive": {
+        "near": {
+          "feature": "clutter_near_degree",
+          "score": 0.6969696969696969,
+          "appearances": 12
+        },
+        "middle": {
+          "feature": "clutter_middle_degree",
+          "score": 0.8257575757575758,
+          "appearances": 12
+        },
+        "far": {
+          "feature": "clutter_far_degree",
+          "score": 0.8712121212121211,
+          "appearances": 12
+        }
+      }
+    },
+    "deviation": {
+      "individual": {
+        "near": {
+          "feature": "windowpane.near",
+          "score": 0.9090909090909091,
+          "appearances": 1
+        },
+        "middle": {
+          "feature": "painting.middle",
+          "score": 1.0,
+          "appearances": 2
+        },
+        "far": {
+          "feature": "box.far",
+          "score": 0.8181818181818182,
+          "appearances": 1
+        }
+      },
+      "comprehensive": {
+        "near": {
+          "feature": "clutter_near_degree",
+          "score": 0.6439393939393939,
+          "appearances": 12
+        },
+        "middle": {
+          "feature": "clutter_middle_degree",
+          "score": 0.6590909090909091,
+          "appearances": 12
+        },
+        "far": {
+          "feature": "clutter_far_degree",
+          "score": 0.7651515151515151,
+          "appearances": 12
+        }
+      }
+    }
+  },
+  "position_top": {
+    "begin": {
+      "individual": {
+        "near": {
+          "feature": "painting.near",
+          "score": 0.6969696969696969,
+          "appearances": 3
+        },
+        "middle": {
+          "feature": "painting.middle",
+          "score": 0.9545454545454546,
+          "appearances": 2
+        },
+        "far": {
+          "feature": "painting.far",
+          "score": 0.7272727272727273,
+          "appearances": 2
+        }
+      },
+      "comprehensive": {
+        "near": {
+          "feature": "clutter_near_degree",
+          "score": 0.7613636363636364,
+          "appearances": 8
+        },
+        "middle": {
+          "feature": "clutter_middle_degree",
+          "score": 0.6136363636363636,
+          "appearances": 8
+        },
+        "far": {
+          "feature": "clutter_far_degree",
+          "score": 0.7613636363636364,
+          "appearances": 8
+        }
+      }
+    },
+    "middle": {
+      "individual": {
+        "near": {
+          "feature": "fence.near",
+          "score": 0.6818181818181819,
+          "appearances": 2
+        },
+        "middle": {
+          "feature": "wall.middle",
+          "score": 0.8727272727272727,
+          "appearances": 5
+        },
+        "far": {
+          "feature": "lamp.far",
+          "score": 0.9090909090909091,
+          "appearances": 1
+        }
+      },
+      "comprehensive": {
+        "near": {
+          "feature": "clutter_near_degree",
+          "score": 0.6363636363636364,
+          "appearances": 8
+        },
+        "middle": {
+          "feature": "clutter_middle_degree",
+          "score": 0.8636363636363636,
+          "appearances": 8
+        },
+        "far": {
+          "feature": "clutter_far_degree",
+          "score": 0.7613636363636364,
+          "appearances": 8
+        }
+      }
+    },
+    "end": {
+      "individual": {
+        "near": {
+          "feature": "windowpane.near",
+          "score": 0.9090909090909091,
+          "appearances": 1
+        },
+        "middle": {
+          "feature": "painting.middle",
+          "score": 1.0,
+          "appearances": 1
+        },
+        "far": {
+          "feature": "box.far",
+          "score": 0.8181818181818182,
+          "appearances": 1
+        }
+      },
+      "comprehensive": {
+        "near": {
+          "feature": "clutter_near_degree",
+          "score": 0.6136363636363636,
+          "appearances": 8
+        },
+        "middle": {
+          "feature": "clutter_middle_degree",
+          "score": 0.75,
+          "appearances": 8
+        },
+        "far": {
+          "feature": "clutter_far_degree",
+          "score": 0.9318181818181818,
+          "appearances": 8
+        }
+      }
+    }
+  },
+  "rf_params": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "min_samples_split": 10,
+    "min_samples_leaf": 5,
+    "max_features": "sqrt",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "figures": {
+    "10": "F:\\Aworks\\DepthPerception\\1metro\\analyse\\figures\\figure10_individual_velocity_top5.png",
+    "11": "F:\\Aworks\\DepthPerception\\1metro\\analyse\\figures\\figure11_comprehensive_velocity_top5.png",
+    "12": "F:\\Aworks\\DepthPerception\\1metro\\analyse\\figures\\figure12_individual_deviation_top5.png",
+    "13": "F:\\Aworks\\DepthPerception\\1metro\\analyse\\figures\\figure13_comprehensive_deviation_top5.png"
+  }
+}

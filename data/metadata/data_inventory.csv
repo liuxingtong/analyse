@@ -1,0 +1,13 @@
+﻿site,station,segment,pedestrian_raw_points,trajectory_ids,scene_source_rows,analysis_rows,source_header_fields,discarded_empty_header_fields,velocity_values_removed_above_2m_s
+nanjingdonglu,East Nanjing Road,1,2285,30,160,150,541,0,0
+nanjingdonglu,East Nanjing Road,2,4011,38,160,150,541,0,0
+nanjingdonglu,East Nanjing Road,3,9854,95,160,150,541,0,11
+nanjingdonglu,East Nanjing Road,4,4775,47,160,150,541,0,0
+nanjingdonglu,East Nanjing Road,5,2135,20,160,150,541,0,0
+nanjingdonglu,East Nanjing Road,6,1777,24,160,150,541,0,0
+nanjingdonglu,East Nanjing Road,7,5144,21,160,150,541,0,0
+wujiaochang,Wujiaochang,1,1987,6,160,150,1071,530,0
+wujiaochang,Wujiaochang,2,5360,64,160,150,1071,530,5
+wujiaochang,Wujiaochang,3,2993,27,160,150,1071,530,0
+wujiaochang,Wujiaochang,4,5507,58,160,150,1071,530,0
+wujiaochang,Wujiaochang,5,3310,36,160,150,541,0,0

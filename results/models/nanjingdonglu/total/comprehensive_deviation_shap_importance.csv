@@ -1,0 +1,13 @@
+﻿feature,mean_abs_shap,rank
+obstacle_far_density,25.385618077383672,1
+obstacle_near_density,20.130327801036415,2
+clutter_middle_degree,17.37376610225515,3
+visibility_near_ratio,16.92149408034932,4
+visibility_middle_ratio,14.08250119994066,5
+clutter_near_degree,13.483531005993632,6
+obstacle_middle_density,13.285948221174497,7
+clutter_far_degree,12.434753046526161,8
+middle_ratio,6.3406125076294435,9
+visibility_far_ratio,4.171878026926956,10
+far_ratio,4.079487586957756,11
+near_ratio,3.6288433089918253,12

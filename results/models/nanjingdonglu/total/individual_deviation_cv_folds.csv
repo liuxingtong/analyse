@@ -1,0 +1,6 @@
+﻿fold,train_n,test_n,r2,mae,rmse,selected_features
+1,840,210,0.4064054790666285,103.36641473885857,164.89223558769825,wall.far|person.near|lamp.middle|floor.near|ceiling.near|column.middle|floor.far|wall.near|person.middle|lamp.near|column.near|railing.near
+2,840,210,0.5371928492472204,94.26300491129103,129.86453946645176,wall.far|person.middle|lamp.middle|floor.far|column.middle|floor.near|ceiling.near|column.near|person.near|railing.near|fence.far|railing.far
+3,840,210,0.5133726139033161,93.738259185364,122.56573717094878,wall.far|person.middle|floor.near|lamp.middle|column.near|ceiling.far|ceiling.middle|column.middle|fence.far|lamp.near|floor.far|railing.far
+4,840,210,0.5916119176380772,90.53081616625904,118.7960889343035,wall.far|person.near|lamp.middle|floor.near|ceiling.far|ceiling.middle|column.near|person.middle|railing.near|ceiling.near|floor.far|column.middle
+5,840,210,0.5098952269715487,107.49748382433927,142.65832020459789,ceiling.far|floor.near|wall.far|ceiling.near|lamp.near|railing.near|floor.far|column.near|person.far|person.near|ceiling.middle|lamp.middle

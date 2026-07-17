@@ -1,0 +1,6 @@
+﻿fold,train_n,test_n,r2,mae,rmse,selected_features
+1,120,30,0.4766410492915546,62.269445076197044,96.45694108561189,light.near|stairs.middle|ceiling.middle|column.near|ceiling.far|person.middle|floor.near|light.far|floor.far|wall.far|railing.far|wall.middle
+2,120,30,0.44046936086896415,104.01145791401076,138.23579205446683,ceiling.middle|column.near|stairs.middle|light.near|wall.middle|floor.middle|person.near|ceiling.near|wall.far|light.far|windowpane.near|floor.near
+3,120,30,0.4953632425972049,86.79712826595033,126.57683846126184,ceiling.middle|light.near|stairs.middle|ceiling.far|wall.middle|column.near|floor.middle|stairs.near|light.far|railing.middle|wall.far|floor.far
+4,120,30,0.48779129615302097,84.61280251937852,118.7923302190165,stairs.middle|light.near|ceiling.middle|floor.near|wall.middle|person.middle|wall.far|wall.near|column.near|light.far|floor.middle|railing.near
+5,120,30,0.507025918212415,83.89999202457416,119.29559883417592,wall.middle|light.near|person.middle|ceiling.middle|light.far|stairs.middle|column.middle|ceiling.far|floor.near|person.near|wall.far|railing.middle

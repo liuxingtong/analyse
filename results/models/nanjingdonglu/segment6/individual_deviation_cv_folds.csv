@@ -1,0 +1,6 @@
+﻿fold,train_n,test_n,r2,mae,rmse,selected_features
+1,120,30,0.6434905729631932,80.31183092221357,93.27727861419216,fence.near|fence.far|wall.far|ceiling.far|ceiling.near|floor.middle|floor.far|fence.middle|wall.middle|windowpane.near|ceiling.middle|person.far
+2,120,30,0.3485456792068621,93.66921230180358,160.01097501926898,wall.far|ceiling.near|fence.near|fence.far|ceiling.far|ceiling.middle|fence.middle|floor.middle|person.far|railing.far|wall.middle|painting.far
+3,120,30,0.626944660869432,70.50835412405198,97.36253538701648,wall.far|person.far|ceiling.near|fence.near|floor.near|ceiling.far|windowpane.near|ceiling.middle|floor.middle|fence.middle|floor.far|fence.far
+4,120,30,0.4953011880966709,65.91655759507819,87.24407912466036,floor.middle|ceiling.far|wall.far|fence.near|ceiling.middle|person.far|windowpane.near|floor.far|painting.middle|wall.middle|ceiling.near|fence.far
+5,120,30,0.43239719136383425,72.02016241382162,84.36914821294006,wall.far|ceiling.near|fence.near|floor.middle|fence.far|ceiling.far|wall.middle|ceiling.middle|person.far|windowpane.near|floor.far|painting.far

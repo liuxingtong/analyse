@@ -1,0 +1,58 @@
+# This repository uses an allow-list so the legacy analysis workspace and raw
+# collection files are not committed accidentally.
+*
+
+# Repository metadata and documentation
+!.gitignore
+!.gitattributes
+!README.md
+!LICENSE
+!CITATION.cff
+!requirements.txt
+!environment.yml
+!pyproject.toml
+
+# Curated, reproducible repository content
+!data/
+!data/**
+!scripts/
+!scripts/**
+!results/
+!results/**
+!figures/
+!figures/**
+!docs/
+!docs/**
+
+# Never include generated caches inside allowed directories
+**/__pycache__/
+**/*.py[cod]
+**/.ipynb_checkpoints/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.DS_Store
+**/Thumbs.db
+
+# Local environments and secrets
+**/.env
+**/.env.*
+**/.venv/
+**/venv/
+**/env/
+**/*.key
+**/*.pem
+**/*credentials*
+**/*token*
+
+# Manuscripts, previews, and large source media remain outside the repository
+**/*.doc
+**/*.docx
+**/*.ppt
+**/*.pptx
+**/*.mp4
+**/*.avi
+**/*.mov
+**/*.mkv
+**/*.zed
+**/*.svo

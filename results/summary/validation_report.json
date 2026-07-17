@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "files_checked": 84,
+  "individual_models_checked": 28,
+  "figure_files_checked": 12,
+  "manuscript": {
+    "paragraphs": 210,
+    "tables": 7,
+    "inline_shapes": 13,
+    "red_runs": 303,
+    "red_characters": 18950
+  },
+  "errors": []
+}
