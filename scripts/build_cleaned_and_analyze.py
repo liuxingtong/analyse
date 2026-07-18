@@ -525,6 +525,8 @@ def plot_global_top5(importance: pd.DataFrame, feature_type: str, target: str, f
     fig, axes = plt.subplots(1, 2, figsize=(10.8, 4.5), constrained_layout=True)
     color = "#3B6EA8" if target == "velocity" else "#E64B35"
     edge_color = "#263238" if target == "velocity" else "#8B2F28"
+    axis_max = 90 if target == "velocity" else 30
+    tick_step = 15 if target == "velocity" else 5
     for ax, site in zip(axes, ("wujiaochang", "nanjingdonglu")):
         station = SITES[site]["label"]
         data = subset[subset.site == site].nsmallest(5, "rank").sort_values("mean_abs_shap")
@@ -533,6 +535,8 @@ def plot_global_top5(importance: pd.DataFrame, feature_type: str, target: str, f
         ax.set_title(station, fontsize=11, weight="bold")
         unit = "mm/s" if target == "velocity" else "mm"
         ax.set_xlabel(f"Mean |SHAP value| ({unit})", fontsize=9)
+        ax.set_xlim(0, axis_max)
+        ax.set_xticks(np.arange(0, axis_max + tick_step, tick_step))
         ax.tick_params(axis="both", labelsize=8)
         ax.grid(axis="x", color="#D9DEE3", linewidth=0.6, alpha=0.8)
         ax.set_axisbelow(True)
