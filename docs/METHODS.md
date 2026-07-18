@@ -6,7 +6,7 @@ Pedestrian and scene files are matched by station and segment number. East Nanji
 
 ## 2. Pedestrian trajectory processing
 
-Direction-consistent pedestrian trajectories are aggregated along the walkway axis into a representative trajectory. Velocity at an aggregation point is the mean velocity of raw points within a 1 m neighborhood. Deviation is the shortest distance from the aggregation point to the first principal-component reference line.
+Retained pedestrian trajectory observations are ordered along the principal walkway axis and grouped using a 50 mm coordinate tolerance. The mean coordinates of each group define one representative spatial analysis location. The `point_count` field records the number of raw trajectory coordinate observations grouped at that location. Velocity is calculated separately as the mean point velocity within an overlapping 1 m circular neighborhood, so `point_count` should not be interpreted as the velocity-neighborhood sample size. Deviation is the shortest distance from the spatial location to the first principal-component reference line.
 
 The curated inventory reports 29,981 raw trajectory points and 275 segment-specific IDs at East Nanjing Road, plus 19,157 points and 191 IDs at Wujiaochang. IDs are unique within source files and are not assumed to identify the same person across segments.
 
@@ -23,7 +23,7 @@ Every scene contains 10 depth levels and 53 semantic classes. Wujiaochang scene 
 
 ## 4. Spatial alignment and smoothing
 
-The first 150 points are retained for every pedestrian and scene segment. Points are spaced at 50 mm along the representative trajectory. Both predictor and target series receive the same centered five-point moving average used in the manuscript workflow. No additional predictor standardization is performed.
+The first 150 ordered spatial analysis locations are retained for every pedestrian and scene segment. These locations are generated using the 50 mm principal-axis grouping tolerance and are matched to the first 150 scene rows by segment and order. Both predictor and target series receive the same centered five-point moving average used in the manuscript workflow. No additional predictor standardization is performed.
 
 Standardization is unnecessary for the present Random Forest workflow because tree splits depend on within-feature ordering and are invariant to monotonic rescaling of individual predictors. Pearson redundancy is also invariant to linear rescaling, and the mRMR mutual-information term measures dependence rather than coefficient magnitude. Retaining the original scale preserves interpretable target and SHAP units. This rationale would not automatically apply to scale-sensitive models such as KNN, SVM, or regularized linear regression.
 

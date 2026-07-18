@@ -2,7 +2,7 @@
 
 ## Segment directory layout
 
-Each directory under `data/cleaned/{site}/segmentN/` contains 150 rows in spatial order.
+Each directory under `data/cleaned/{site}/segmentN/` contains 150 retained spatial analysis locations in order. The number 150 is the fixed number of matched locations used for modeling, not the number of independent pedestrians or raw observations contributing to each location.
 
 | File | Grain | Description |
 |---|---:|---|
@@ -48,7 +48,7 @@ Values are aggregated semantic pixel proportions. They are not standardized befo
 |---|---|---|
 | `x`, `y` | mm | Representative trajectory coordinates. |
 | `velocity` | mm/s | Aggregated pedestrian velocity; divide by 1,000 for m/s. |
-| `point_count` | count | Raw trajectory points contributing to the aggregation neighborhood. |
+| `point_count` | count | Raw trajectory coordinate observations grouped with the spatial location under the 50 mm principal-axis tolerance. This is not the count in the overlapping 1,000 mm neighborhood used to calculate velocity. |
 | `deviation` | mm | Distance from the PCA reference path; divide by 1,000 for m. |
 
 ## Metadata files
@@ -64,6 +64,8 @@ Values are aggregated semantic pixel proportions. They are not standardized befo
 - `table5_depth_rankings.csv`: weighted rankings by outcome, variable type, and depth.
 - `table6_position_rankings.csv`: weighted rankings by walkway position, variable type, and depth.
 - `cv_method_comparison.csv`: random versus contiguous five-fold performance comparison.
+- `trajectory_aggregation_support.csv`: all 1,800 retained spatial locations with station, segment, location index, coordinates, velocity, deviation, and `point_count`.
+- `trajectory_aggregation_summary.csv`: segment-level mean, quartiles, median, minimum, and maximum of `point_count`.
 - `analysis_summary.json`: machine-readable headline results and parameters.
 - `repository_validation.json`: repository integrity check.
 

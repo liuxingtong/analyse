@@ -1,0 +1,13 @@
+﻿site,station,segment,spatial_locations,point_count_mean,point_count_q1,point_count_median,point_count_q3,point_count_min,point_count_max
+wujiaochang,Wujiaochang,1,150,12.646666666666667,10.0,12.0,13.0,4.0,126.0
+wujiaochang,Wujiaochang,2,150,35.17333333333333,17.25,24.5,41.5,9.0,189.0
+wujiaochang,Wujiaochang,3,150,19.06,13.0,17.0,20.75,6.0,66.0
+wujiaochang,Wujiaochang,4,150,35.12,21.0,32.0,45.0,8.0,110.0
+wujiaochang,Wujiaochang,5,150,21.046666666666667,17.0,20.0,24.0,10.0,55.0
+nanjingdonglu,East Nanjing Road,1,150,13.713333333333333,11.0,13.0,16.0,5.0,37.0
+nanjingdonglu,East Nanjing Road,2,150,26.053333333333335,11.0,18.5,32.75,3.0,161.0
+nanjingdonglu,East Nanjing Road,3,150,63.0,43.0,59.0,78.0,10.0,167.0
+nanjingdonglu,East Nanjing Road,4,150,27.333333333333332,17.0,22.0,29.0,2.0,131.0
+nanjingdonglu,East Nanjing Road,5,150,11.453333333333333,7.0,10.0,13.0,1.0,48.0
+nanjingdonglu,East Nanjing Road,6,150,11.866666666666667,8.0,10.0,13.0,3.0,70.0
+nanjingdonglu,East Nanjing Road,7,150,16.24,5.0,8.0,21.75,1.0,115.0

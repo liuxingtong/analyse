@@ -2,10 +2,12 @@
 
 ## Repository-relative locations
 
-- Cleaned 150-point data: `data/cleaned/{site}/segmentN/`
+- Cleaned data for 150 spatial analysis locations per segment: `data/cleaned/{site}/segmentN/`
 - Sample inventory and descriptive statistics: `data/metadata/`
 - Reproducible scripts: `scripts/`
 - Summary model outputs: `results/summary/`
+- Per-location trajectory aggregation support: `results/summary/trajectory_aggregation_support.csv`
+- Segment-level aggregation-count summary: `results/summary/trajectory_aggregation_summary.csv`
 - Per-model outputs: `results/models/{site}/{segmentN|total}/`
 - Figures 10–13: `figures/`
 - Method and data documentation: `docs/`

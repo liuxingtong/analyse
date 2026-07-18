@@ -4,9 +4,9 @@ This repository contains the curated data, reproducible Python workflow, model o
 
 The study includes 12 matched walkway segments from two Shanghai metro stations:
 
-- Wujiaochang: 5 segments, 750 analysis points, 191 segment-specific trajectory IDs.
-- East Nanjing Road: 7 segments, 1,050 analysis points, 275 segment-specific trajectory IDs.
-- Total: 1,800 matched analysis points, 466 segment-specific trajectory IDs, and 49,138 raw pedestrian trajectory points before spatial aggregation.
+- Wujiaochang: 5 segments, 750 spatial analysis locations, 191 segment-specific trajectory IDs.
+- East Nanjing Road: 7 segments, 1,050 spatial analysis locations, 275 segment-specific trajectory IDs.
+- Total: 1,800 matched spatial analysis locations, 466 segment-specific trajectory IDs, and 49,138 raw pedestrian trajectory points before spatial aggregation.
 
 ## Repository structure
 
@@ -59,7 +59,8 @@ Without the environment variable, the script looks for the raw station directori
 
 ## Analysis specification
 
-- Each segment retains the first 150 matched points at 50 mm spacing.
+- Raw trajectory observations are ordered along the principal walkway axis and grouped using a 50 mm coordinate tolerance. Each segment retains the first 150 matched spatial analysis locations.
+- `point_count` records the number of raw trajectory coordinate observations in each 50 mm axis-tolerance group. It is distinct from the overlapping 1,000 mm neighborhood used to calculate velocity.
 - Velocity values above 2 m/s are removed and interpolated according to the manuscript cleaning rule.
 - No additional predictor standardization is applied.
 - Scene and trajectory series use a five-point moving average.
