@@ -67,6 +67,7 @@ Without the environment variable, the script looks for the raw station directori
 - All 12 theory-derived comprehensive variables enter the model.
 - Random Forest parameters are fixed at 100 trees, maximum depth 10, minimum split size 10, minimum leaf size 5, `max_features="sqrt"`, and seed 42.
 - Reported performance uses shuffled random five-fold cross-validation with seed 42.
+- Segment-level synthesis uses each feature's model-normalized mean absolute SHAP share, assigns zero when the feature is absent, and averages across all eligible models so the reported score combines attribution magnitude with recurrence.
 - SHAP values describe attribution within the fitted Random Forest and are not significance tests or causal effects.
 
 The station-level cross-validated R² values range from 0.346 to 0.868. Random folds estimate within-dataset interpolation; spatial smoothing means adjacent points can enter different folds, so performance may be optimistic for transfer to unseen segments.

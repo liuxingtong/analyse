@@ -449,17 +449,35 @@ def depth_of(feature: str) -> str | None:
     return None
 
 
-def rank_weight(n: int, rank: int) -> float:
-    return 1.0 if n <= 1 else (n - rank) / (n - 1)
-
-
 def aggregate_rankings(importance: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     local = importance[importance["scope"].str.startswith("segment")].copy()
-    local["weight"] = local.apply(lambda r: rank_weight(12, int(r["rank"])), axis=1)
+    local["model_id"] = (
+        local["site"].astype(str) + "|" + local["scope"].astype(str) + "|"
+        + local["feature_type"].astype(str) + "|" + local["target"].astype(str)
+    )
+    model_totals = local.groupby("model_id")["mean_abs_shap"].transform("sum")
+    if (model_totals <= 0).any():
+        raise ValueError("A segment model has non-positive total mean absolute SHAP importance.")
+    # Normalize within each fitted model so velocity and deviation models are
+    # comparable despite different target units. A feature absent from a model
+    # is represented implicitly by zero when the normalized shares are averaged
+    # over every eligible model rather than only over appearances.
+    local["normalized_shap_share"] = local["mean_abs_shap"] / model_totals
     local["depth"] = local["feature"].map(depth_of)
+
+    table5_denominators = (
+        local[["target", "feature_type", "model_id"]].drop_duplicates()
+        .groupby(["target", "feature_type"]).size().rename("eligible_models").reset_index()
+    )
     table5 = (local.groupby(["target", "feature_type", "depth", "feature"], dropna=False)
-              .agg(score=("weight", "mean"), appearances=("feature", "size"))
-              .reset_index())
+              .agg(shap_share_sum=("normalized_shap_share", "sum"),
+                   appearances=("model_id", "nunique"))
+              .reset_index()
+              .merge(table5_denominators, on=["target", "feature_type"], how="left"))
+    table5["score"] = table5["shap_share_sum"] / table5["eligible_models"]
+    table5["appearance_rate"] = table5["appearances"] / table5["eligible_models"]
+    table5["conditional_shap_share"] = table5["shap_share_sum"] / table5["appearances"]
+    table5 = table5.drop(columns="shap_share_sum")
     table5 = table5.sort_values(["target", "feature_type", "depth", "score"], ascending=[True, True, True, False])
     table5.to_csv(RESULTS_OUT / "table5_depth_rankings.csv", index=False, encoding="utf-8-sig")
 
@@ -475,9 +493,19 @@ def aggregate_rankings(importance: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataF
 
     local["segment_int"] = local["scope"].str.replace("segment", "", regex=False).astype(int)
     local["position"] = [position(s, i) for s, i in zip(local.site, local.segment_int)]
+    table6_denominators = (
+        local[["position", "feature_type", "model_id"]].drop_duplicates()
+        .groupby(["position", "feature_type"]).size().rename("eligible_models").reset_index()
+    )
     table6 = (local.groupby(["position", "feature_type", "depth", "feature"], dropna=False)
-              .agg(score=("weight", "mean"), appearances=("feature", "size"))
-              .reset_index())
+              .agg(shap_share_sum=("normalized_shap_share", "sum"),
+                   appearances=("model_id", "nunique"))
+              .reset_index()
+              .merge(table6_denominators, on=["position", "feature_type"], how="left"))
+    table6["score"] = table6["shap_share_sum"] / table6["eligible_models"]
+    table6["appearance_rate"] = table6["appearances"] / table6["eligible_models"]
+    table6["conditional_shap_share"] = table6["shap_share_sum"] / table6["appearances"]
+    table6 = table6.drop(columns="shap_share_sum")
     table6 = table6.sort_values(["position", "feature_type", "depth", "score"], ascending=[True, True, True, False])
     table6.to_csv(RESULTS_OUT / "table6_position_rankings.csv", index=False, encoding="utf-8-sig")
     return table5, table6
@@ -495,12 +523,13 @@ def readable_feature(feature: str) -> str:
 def plot_global_top5(importance: pd.DataFrame, feature_type: str, target: str, figure_number: int):
     subset = importance[(importance.scope == "total") & (importance.feature_type == feature_type) & (importance.target == target)]
     fig, axes = plt.subplots(1, 2, figsize=(10.8, 4.5), constrained_layout=True)
-    color = "#3B6EA8" if target == "velocity" else "#D08B3E"
+    color = "#3B6EA8" if target == "velocity" else "#E64B35"
+    edge_color = "#263238" if target == "velocity" else "#8B2F28"
     for ax, site in zip(axes, ("wujiaochang", "nanjingdonglu")):
         station = SITES[site]["label"]
         data = subset[subset.site == site].nsmallest(5, "rank").sort_values("mean_abs_shap")
         labels = [readable_feature(x) for x in data.feature]
-        ax.barh(labels, data.mean_abs_shap, color=color, edgecolor="#263238", linewidth=0.6)
+        ax.barh(labels, data.mean_abs_shap, color=color, edgecolor=edge_color, linewidth=0.6)
         ax.set_title(station, fontsize=11, weight="bold")
         unit = "mm/s" if target == "velocity" else "mm"
         ax.set_xlabel(f"Mean |SHAP value| ({unit})", fontsize=9)

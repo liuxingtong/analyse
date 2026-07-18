@@ -311,35 +311,35 @@
     "velocity": {
       "individual": {
         "near": {
-          "feature": "painting.near",
-          "score": 0.6818181818181819,
-          "appearances": 2
+          "feature": "wall.near",
+          "score": 0.06024056934078565,
+          "appearances": 8
         },
         "middle": {
-          "feature": "chandelier.middle",
-          "score": 0.9090909090909091,
-          "appearances": 1
+          "feature": "wall.middle",
+          "score": 0.08741291849930398,
+          "appearances": 9
         },
         "far": {
-          "feature": "railing.far",
-          "score": 0.8181818181818182,
-          "appearances": 1
+          "feature": "person.far",
+          "score": 0.08359132320111817,
+          "appearances": 9
         }
       },
       "comprehensive": {
         "near": {
           "feature": "clutter_near_degree",
-          "score": 0.6969696969696969,
+          "score": 0.1424899247296534,
           "appearances": 12
         },
         "middle": {
           "feature": "clutter_middle_degree",
-          "score": 0.8257575757575758,
+          "score": 0.1504067448587186,
           "appearances": 12
         },
         "far": {
           "feature": "clutter_far_degree",
-          "score": 0.8712121212121211,
+          "score": 0.18093645931823266,
           "appearances": 12
         }
       }
@@ -347,35 +347,35 @@
     "deviation": {
       "individual": {
         "near": {
-          "feature": "windowpane.near",
-          "score": 0.9090909090909091,
-          "appearances": 1
+          "feature": "floor.near",
+          "score": 0.08435366756405431,
+          "appearances": 10
         },
         "middle": {
-          "feature": "painting.middle",
-          "score": 1.0,
-          "appearances": 2
+          "feature": "person.middle",
+          "score": 0.07984074999332312,
+          "appearances": 11
         },
         "far": {
-          "feature": "box.far",
-          "score": 0.8181818181818182,
-          "appearances": 1
+          "feature": "wall.far",
+          "score": 0.07568798991872239,
+          "appearances": 10
         }
       },
       "comprehensive": {
         "near": {
           "feature": "clutter_near_degree",
-          "score": 0.6439393939393939,
+          "score": 0.11334360193743763,
           "appearances": 12
         },
         "middle": {
           "feature": "clutter_middle_degree",
-          "score": 0.6590909090909091,
+          "score": 0.13216961151912932,
           "appearances": 12
         },
         "far": {
           "feature": "clutter_far_degree",
-          "score": 0.7651515151515151,
+          "score": 0.13732014512510998,
           "appearances": 12
         }
       }
@@ -385,35 +385,35 @@
     "begin": {
       "individual": {
         "near": {
-          "feature": "painting.near",
-          "score": 0.6969696969696969,
-          "appearances": 3
+          "feature": "wall.near",
+          "score": 0.07080067067802871,
+          "appearances": 7
         },
         "middle": {
-          "feature": "painting.middle",
-          "score": 0.9545454545454546,
-          "appearances": 2
+          "feature": "person.middle",
+          "score": 0.07760915106769962,
+          "appearances": 8
         },
         "far": {
-          "feature": "painting.far",
-          "score": 0.7272727272727273,
-          "appearances": 2
+          "feature": "wall.far",
+          "score": 0.06262862117251038,
+          "appearances": 6
         }
       },
       "comprehensive": {
         "near": {
           "feature": "clutter_near_degree",
-          "score": 0.7613636363636364,
+          "score": 0.13053841044718476,
           "appearances": 8
         },
         "middle": {
           "feature": "clutter_middle_degree",
-          "score": 0.6136363636363636,
+          "score": 0.09691880581182089,
           "appearances": 8
         },
         "far": {
           "feature": "clutter_far_degree",
-          "score": 0.7613636363636364,
+          "score": 0.1611092715017298,
           "appearances": 8
         }
       }
@@ -421,35 +421,35 @@
     "middle": {
       "individual": {
         "near": {
-          "feature": "fence.near",
-          "score": 0.6818181818181819,
-          "appearances": 2
+          "feature": "ceiling.near",
+          "score": 0.057628671262539594,
+          "appearances": 7
         },
         "middle": {
           "feature": "wall.middle",
-          "score": 0.8727272727272727,
+          "score": 0.10969314378671952,
           "appearances": 5
         },
         "far": {
-          "feature": "lamp.far",
-          "score": 0.9090909090909091,
-          "appearances": 1
+          "feature": "person.far",
+          "score": 0.09149388827246377,
+          "appearances": 7
         }
       },
       "comprehensive": {
         "near": {
           "feature": "clutter_near_degree",
-          "score": 0.6363636363636364,
+          "score": 0.12397561561379755,
           "appearances": 8
         },
         "middle": {
           "feature": "clutter_middle_degree",
-          "score": 0.8636363636363636,
+          "score": 0.18860834905648155,
           "appearances": 8
         },
         "far": {
           "feature": "clutter_far_degree",
-          "score": 0.7613636363636364,
+          "score": 0.12137377163332222,
           "appearances": 8
         }
       }
@@ -457,35 +457,35 @@
     "end": {
       "individual": {
         "near": {
-          "feature": "windowpane.near",
-          "score": 0.9090909090909091,
-          "appearances": 1
+          "feature": "floor.near",
+          "score": 0.09689821595306569,
+          "appearances": 7
         },
         "middle": {
-          "feature": "painting.middle",
-          "score": 1.0,
-          "appearances": 1
+          "feature": "ceiling.middle",
+          "score": 0.07936570978720696,
+          "appearances": 5
         },
         "far": {
-          "feature": "box.far",
-          "score": 0.8181818181818182,
-          "appearances": 1
+          "feature": "wall.far",
+          "score": 0.08296171655066316,
+          "appearances": 7
         }
       },
       "comprehensive": {
         "near": {
           "feature": "clutter_near_degree",
-          "score": 0.6136363636363636,
+          "score": 0.12923626393965423,
           "appearances": 8
         },
         "middle": {
           "feature": "clutter_middle_degree",
-          "score": 0.75,
+          "score": 0.13833737969846943,
           "appearances": 8
         },
         "far": {
           "feature": "clutter_far_degree",
-          "score": 0.9318181818181818,
+          "score": 0.19490186352996192,
           "appearances": 8
         }
       }

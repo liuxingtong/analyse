@@ -73,11 +73,11 @@ The reported analysis uses shuffled five-fold KFold cross-validation with seed 4
 
 Random folds estimate interpolation within the observed datasets. Because moving averages introduce spatial dependence, adjacent points can be assigned to different folds and may produce optimistic estimates for unseen walkway segments. `compare_cv_methods.py` records the contrast with contiguous default KFold evaluation.
 
-## 9. SHAP and weighted rankings
+## 9. SHAP and stability-adjusted synthesis
 
 TreeSHAP is calculated from the final Random Forest fitted to the complete analysis set. Importance is the mean absolute SHAP value. Figures 10–13 show the five highest station-level attributions for each predictor-set/outcome combination.
 
-For depth and walkway-position synthesis, segment-level features are ranked by mean absolute SHAP value and assigned weights decreasing linearly from 1 to 0. Features absent after screening or mRMR selection receive no weight. Scores and the number of model appearances are both reported because a high score based on one appearance is less stable than a recurring feature.
+For depth and walkway-position synthesis, each feature's mean absolute SHAP value is divided by the sum of mean absolute SHAP values for all selected predictors in the same fitted model. This produces a model-normalized SHAP contribution share and permits synthesis across velocity and deviation models despite their different target units. A feature absent after screening or mRMR selection receives a share of zero. The stability-adjusted SHAP score is the mean normalized share across all eligible models: 12 segment models for each outcome in the depth-zone synthesis and eight segment-outcome models for each walkway position. The score therefore reflects both attribution magnitude when present and recurrence across models. Appearance counts and rates are retained separately.
 
 SHAP is an explanation of the fitted predictive model. It is not a p-value, confidence interval, conventional effect size, or causal estimate.
 
