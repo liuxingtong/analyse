@@ -2,7 +2,7 @@
 
 ## Segment directory layout
 
-Each directory under `data/cleaned/{site}/segmentN/` contains 150 retained spatial analysis locations in order. The number 150 is the fixed number of matched locations used for modeling, not the number of independent pedestrians or raw observations contributing to each location.
+Each directory under `data/cleaned/{site}/segmentN/` contains 150 ordered spatial aggregation locations. After coordinate registration, a 7,500 mm corridor segment is sampled every 50 mm, and the spatial-scene video frame corresponding to each location supplies the matched visual variables. The number 150 is therefore a fixed spatial sampling design, not the number of independent pedestrians or a truncation of scene-variable rows.
 
 | File | Grain | Description |
 |---|---:|---|

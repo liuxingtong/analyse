@@ -100,7 +100,7 @@ def moving_average(values: np.ndarray, window: int = 5) -> np.ndarray:
 
 
 def read_scene_values(path: Path) -> tuple[np.ndarray, np.ndarray, dict]:
-    """Read the first 541 real fields and reconstruct the ten 2-m depth bands."""
+    """Read the 150 registered spatial frames and reconstruct ten depth bands."""
     with path.open("r", encoding="utf-8-sig", newline="") as f:
         rows = list(csv.reader(f))
     if len(rows) < 151:
@@ -110,7 +110,11 @@ def read_scene_values(path: Path) -> tuple[np.ndarray, np.ndarray, dict]:
     parsed = []
     frames = []
     marker_errors = []
-    for row_no, row in enumerate(rows[1:151], start=2):
+    # The acquisition export stores the 150 spatially registered aggregation-
+    # location frames in order. Other exported diagnostic frames are outside
+    # the registered 7,500 mm analysis grid and do not define analysis rows.
+    registered_rows = rows[1:151]
+    for row_no, row in enumerate(registered_rows, start=2):
         if len(row) < 541:
             raise ValueError(f"{path}, row {row_no}: expected >=541 fields, got {len(row)}")
         row = row[:541]
@@ -189,7 +193,7 @@ def aggregate_scene(frames: np.ndarray, levels: np.ndarray) -> tuple[pd.DataFram
 def clean_trajectory(site: str, segment: int) -> tuple[pd.DataFrame, pd.DataFrame, int, int, int]:
     result_root = SOURCE / site / "result"
     raw = pd.read_csv(result_root / f"{segment}.csv")
-    trajectory = pd.read_csv(result_root / f"result{segment}" / "main_trajectory_points.csv").iloc[:150].copy()
+    trajectory = pd.read_csv(result_root / f"result{segment}" / "main_trajectory_points.csv").copy()
     if len(trajectory) != 150:
         raise ValueError(f"{site}-{segment}: main trajectory does not contain 150 rows")
     removed = int((trajectory["velocity"] > 2000).sum())
@@ -483,7 +487,7 @@ def aggregate_rankings(importance: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataF
 
     def position(site: str, segment: int) -> str:
         if site == "wujiaochang":
-            return "begin" if segment <= 2 else ("middle" if segment == 3 else "end")
+            return "begin" if segment in (1, 2) else ("middle" if segment in (3, 4) else "end")
         # East Nanjing Road: segments 1-4 belong to Line 10; 5-7 to Line 2.
         if segment in (1, 5):
             return "begin"

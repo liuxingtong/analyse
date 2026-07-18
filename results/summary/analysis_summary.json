@@ -382,113 +382,113 @@
     }
   },
   "position_top": {
-    "begin": {
-      "individual": {
-        "near": {
-          "feature": "wall.near",
-          "score": 0.07080067067802871,
-          "appearances": 7
-        },
-        "middle": {
-          "feature": "person.middle",
-          "score": 0.07760915106769962,
-          "appearances": 8
-        },
-        "far": {
-          "feature": "wall.far",
-          "score": 0.06262862117251038,
-          "appearances": 6
-        }
-      },
-      "comprehensive": {
-        "near": {
-          "feature": "clutter_near_degree",
-          "score": 0.13053841044718476,
-          "appearances": 8
-        },
-        "middle": {
-          "feature": "clutter_middle_degree",
-          "score": 0.09691880581182089,
-          "appearances": 8
-        },
-        "far": {
-          "feature": "clutter_far_degree",
-          "score": 0.1611092715017298,
-          "appearances": 8
-        }
-      }
+    "begin|comprehensive|far": {
+      "feature": "clutter_far_degree",
+      "score": 0.1611092715017298,
+      "appearances": 8,
+      "eligible_models": 8
     },
-    "middle": {
-      "individual": {
-        "near": {
-          "feature": "ceiling.near",
-          "score": 0.057628671262539594,
-          "appearances": 7
-        },
-        "middle": {
-          "feature": "wall.middle",
-          "score": 0.10969314378671952,
-          "appearances": 5
-        },
-        "far": {
-          "feature": "person.far",
-          "score": 0.09149388827246377,
-          "appearances": 7
-        }
-      },
-      "comprehensive": {
-        "near": {
-          "feature": "clutter_near_degree",
-          "score": 0.12397561561379755,
-          "appearances": 8
-        },
-        "middle": {
-          "feature": "clutter_middle_degree",
-          "score": 0.18860834905648155,
-          "appearances": 8
-        },
-        "far": {
-          "feature": "clutter_far_degree",
-          "score": 0.12137377163332222,
-          "appearances": 8
-        }
-      }
+    "begin|comprehensive|middle": {
+      "feature": "clutter_middle_degree",
+      "score": 0.09691880581182089,
+      "appearances": 8,
+      "eligible_models": 8
     },
-    "end": {
-      "individual": {
-        "near": {
-          "feature": "floor.near",
-          "score": 0.09689821595306569,
-          "appearances": 7
-        },
-        "middle": {
-          "feature": "ceiling.middle",
-          "score": 0.07936570978720696,
-          "appearances": 5
-        },
-        "far": {
-          "feature": "wall.far",
-          "score": 0.08296171655066316,
-          "appearances": 7
-        }
-      },
-      "comprehensive": {
-        "near": {
-          "feature": "clutter_near_degree",
-          "score": 0.12923626393965423,
-          "appearances": 8
-        },
-        "middle": {
-          "feature": "clutter_middle_degree",
-          "score": 0.13833737969846943,
-          "appearances": 8
-        },
-        "far": {
-          "feature": "clutter_far_degree",
-          "score": 0.19490186352996192,
-          "appearances": 8
-        }
-      }
+    "begin|comprehensive|near": {
+      "feature": "clutter_near_degree",
+      "score": 0.13053841044718478,
+      "appearances": 8,
+      "eligible_models": 8
+    },
+    "begin|individual|far": {
+      "feature": "wall.far",
+      "score": 0.06262862117251038,
+      "appearances": 6,
+      "eligible_models": 8
+    },
+    "begin|individual|middle": {
+      "feature": "person.middle",
+      "score": 0.07760915106769964,
+      "appearances": 8,
+      "eligible_models": 8
+    },
+    "begin|individual|near": {
+      "feature": "wall.near",
+      "score": 0.07080067067802871,
+      "appearances": 7,
+      "eligible_models": 8
+    },
+    "end|comprehensive|far": {
+      "feature": "clutter_far_degree",
+      "score": 0.20240061445567473,
+      "appearances": 6,
+      "eligible_models": 6
+    },
+    "end|comprehensive|middle": {
+      "feature": "clutter_middle_degree",
+      "score": 0.11666544775137462,
+      "appearances": 6,
+      "eligible_models": 6
+    },
+    "end|comprehensive|near": {
+      "feature": "clutter_near_degree",
+      "score": 0.13184363964532936,
+      "appearances": 6,
+      "eligible_models": 6
+    },
+    "end|individual|far": {
+      "feature": "wall.far",
+      "score": 0.09808524314697893,
+      "appearances": 6,
+      "eligible_models": 6
+    },
+    "end|individual|middle": {
+      "feature": "ceiling.middle",
+      "score": 0.10582094638294261,
+      "appearances": 5,
+      "eligible_models": 6
+    },
+    "end|individual|near": {
+      "feature": "wall.near",
+      "score": 0.10321918368922085,
+      "appearances": 6,
+      "eligible_models": 6
+    },
+    "middle|comprehensive|far": {
+      "feature": "clutter_far_degree",
+      "score": 0.13158013945722247,
+      "appearances": 10,
+      "eligible_models": 10
+    },
+    "middle|comprehensive|middle": {
+      "feature": "clutter_middle_degree",
+      "score": 0.19155731435313603,
+      "appearances": 10,
+      "eligible_models": 10
+    },
+    "middle|comprehensive|near": {
+      "feature": "clutter_near_degree",
+      "score": 0.12346331985556377,
+      "appearances": 10,
+      "eligible_models": 10
+    },
+    "middle|individual|far": {
+      "feature": "person.far",
+      "score": 0.09513687385336005,
+      "appearances": 9,
+      "eligible_models": 10
+    },
+    "middle|individual|middle": {
+      "feature": "wall.middle",
+      "score": 0.09901541133731709,
+      "appearances": 6,
+      "eligible_models": 10
+    },
+    "middle|individual|near": {
+      "feature": "floor.near",
+      "score": 0.06425487070970853,
+      "appearances": 9,
+      "eligible_models": 10
     }
   },
   "rf_params": {

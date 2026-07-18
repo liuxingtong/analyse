@@ -23,7 +23,9 @@ Every scene contains 10 depth levels and 53 semantic classes. Wujiaochang scene 
 
 ## 4. Spatial alignment and smoothing
 
-The first 150 ordered spatial analysis locations are retained for every pedestrian and scene segment. These locations are generated using the 50 mm principal-axis grouping tolerance and are matched to the first 150 scene rows by segment and order. Both predictor and target series receive the same centered five-point moving average used in the manuscript workflow. No additional predictor standardization is performed.
+After spatial-coordinate registration, every 7,500 mm corridor segment is represented by 150 fixed aggregation locations sampled at 50 mm intervals. Pedestrian measures are aggregated at these locations, and the spatial-scene video frame acquired at each corresponding registered location supplies the matched visual variables. Thus, the 150 observations are predefined spatial samples rather than a row-based truncation of scene variables. Both predictor and target series receive the same centered five-point moving average used in the manuscript workflow. No additional predictor standardization is performed.
+
+For position-level comparison, Wujiaochang segments 1–2 are classified as the beginning, segments 3–4 as the middle, and segment 5 as the end. At East Nanjing Road, segments 1 and 5 are beginnings, segments 2, 3, and 6 are middles, and segments 4 and 7 are ends because segments 1–4 and 5–7 belong to two separate walkways.
 
 Standardization is unnecessary for the present Random Forest workflow because tree splits depend on within-feature ordering and are invariant to monotonic rescaling of individual predictors. Pearson redundancy is also invariant to linear rescaling, and the mRMR mutual-information term measures dependence rather than coefficient magnitude. Retaining the original scale preserves interpretable target and SHAP units. This rationale would not automatically apply to scale-sensitive models such as KNN, SVM, or regularized linear regression.
 

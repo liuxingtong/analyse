@@ -2,7 +2,7 @@
 
 ## Repository-relative locations
 
-- Cleaned data for 150 spatial analysis locations per segment: `data/cleaned/{site}/segmentN/`
+- Cleaned data for the 150 registered spatial aggregation locations per 7,500 mm segment (50 mm spacing): `data/cleaned/{site}/segmentN/`
 - Sample inventory and descriptive statistics: `data/metadata/`
 - Reproducible scripts: `scripts/`
 - Summary model outputs: `results/summary/`

@@ -59,7 +59,7 @@ Without the environment variable, the script looks for the raw station directori
 
 ## Analysis specification
 
-- Raw trajectory observations are ordered along the principal walkway axis and grouped using a 50 mm coordinate tolerance. Each segment retains the first 150 matched spatial analysis locations.
+- Raw trajectory observations are registered to the principal walkway axis and aggregated at 150 fixed spatial locations. These locations cover each 7,500 mm segment at 50 mm intervals; the spatial-scene video frame at each registered aggregation location is then matched one-to-one with the pedestrian measure. The 150 observations are therefore predefined spatial samples rather than a row-based truncation of scene variables.
 - `point_count` records the number of raw trajectory coordinate observations in each 50 mm axis-tolerance group. It is distinct from the overlapping 1,000 mm neighborhood used to calculate velocity.
 - Velocity values above 2 m/s are removed and interpolated according to the manuscript cleaning rule.
 - No additional predictor standardization is applied.
